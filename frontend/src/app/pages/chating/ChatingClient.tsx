@@ -15,7 +15,7 @@ export default function ChatingClient() {
   const { getAllChatPersonal } = useChatPersonal();
   const [chattAll, setAllPersonal] = useState<any[]>([]);
   const [activeTab, setActiveTab] = useState<"groups" | "messages">("groups");
-
+  const DEFAULT_AVATAR = "/11789135.png";
   console.log(chatGroups, "members");
 
   useEffect(() => {
@@ -84,7 +84,7 @@ export default function ChatingClient() {
                     {/* Left section: Image + Info */}
                     <div className="flex items-center gap-3 sm:gap-4 min-w-0">
                       <Image
-                        src={group.foto_group || "/images/default-group.png"}
+                        src={group.foto_group || DEFAULT_AVATAR}
                         alt={group.name_group}
                         width={48}
                         height={48}
