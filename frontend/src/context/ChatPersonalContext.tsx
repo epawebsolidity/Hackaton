@@ -28,7 +28,7 @@ type ChatPersonalContextType = {
     chat: ChatPersonal;
     otherUser: any;
   } | null>;
-  getAllChatPersonal: () => Promise<ChatPersonal[] | null>;
+ getAllChatPersonal: (userId: string) => Promise<ChatPersonal[] | null>;
   loading: boolean;
   success: boolean;
 };
