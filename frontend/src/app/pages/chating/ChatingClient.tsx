@@ -99,7 +99,7 @@ export default function ChatingClient() {
                           {group.name_group}
                         </h3>
                         <p className="text-xs font-semibold text-gray-500 truncate">
-                            @{group.members?.[0]?.username || "Unknown Creator"}
+                            {/* @{group.members?.[0]?.username || "Unknown Creator"} */}
                         </p>
                       </div>
                     </div>
