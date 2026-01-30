@@ -84,7 +84,7 @@ export default function ChatingClient() {
                     {/* Left section: Image + Info */}
                     <div className="flex items-center gap-3 sm:gap-4 min-w-0">
                       <Image
-                        src={group.foto_group || DEFAULT_AVATAR}
+                        src={group.foto || DEFAULT_AVATAR}
                         alt={group.name_group}
                         width={48}
                         height={48}
@@ -99,7 +99,7 @@ export default function ChatingClient() {
                           {group.name_group}
                         </h3>
                         <p className="text-xs font-semibold text-gray-500 truncate">
-                          @{group.members?.[0]?.username || "Unknown Creator"}
+                            @{group.members?.[0]?.username || "Unknown Creator"}
                         </p>
                       </div>
                     </div>
