@@ -109,7 +109,7 @@ export const ChatPersonalProvider = ({
   );
 
   const getAllChatPersonal = useCallback(
-    async (id_users: string): Promise<ChatPersonal[] | null> => {
+    async (userId: string): Promise<ChatPersonal[] | null> => {
       try {
         const chat = await fetchWithAuth(
           `${process.env.NEXT_PUBLIC_LINK}/api/chatpersonal/get/`,
@@ -121,7 +121,7 @@ export const ChatPersonalProvider = ({
                 ? { Authorization: `Bearer ${accessToken}` }
                 : {}),
             },
-            body: JSON.stringify({ id_users }),
+            body: JSON.stringify({ userId }),
           },
           accessToken,
           sendRefreshToken,
