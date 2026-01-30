@@ -4,7 +4,7 @@ export interface ChatGroup {
   id_group_chat: UUID;
   id_users: string;
   name_group: string;
-  foto: string;
+  foto_group?: string;
 }
 
 export type ChatGroupContextType = {
