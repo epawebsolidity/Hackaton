@@ -4,7 +4,7 @@ export interface ChatGroup {
   id_group_chat: UUID;
   id_users: string;
   name_group: string;
-  foto_group?: string; // optional, since fallback exists
+  foto?: string; // optional, since fallback exists
   members?: {
     id_users: string;
     username: string;
