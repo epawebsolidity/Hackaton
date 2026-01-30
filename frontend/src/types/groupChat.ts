@@ -4,11 +4,16 @@ export interface ChatGroup {
   id_group_chat: UUID;
   id_users: string;
   name_group: string;
-  foto?: string; // gunakan foto, bukan foto_group
+  foto_group?: string; // optional, since fallback exists
   members?: {
-    username?: string;
-  }[];
+    id_users: string;
+    username: string;
+    first_name?: string;
+    last_name?: string;
+    foto?: string | null;
+  }[]; // optional array of member objects
 }
+
 
 
 export type ChatGroupContextType = {
