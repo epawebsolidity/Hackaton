@@ -4,8 +4,12 @@ export interface ChatGroup {
   id_group_chat: UUID;
   id_users: string;
   name_group: string;
-  foto_group?: string;
+  foto?: string; // gunakan foto, bukan foto_group
+  members?: {
+    username?: string;
+  }[];
 }
+
 
 export type ChatGroupContextType = {
   createChatGroup: (payload: FormData) => Promise<ChatGroup | null>;
