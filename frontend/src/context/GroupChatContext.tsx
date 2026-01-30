@@ -69,7 +69,8 @@ export const ChatGroupProvider = ({
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const { accessToken, sendRefreshToken, userId } = useWallet();
-  const [chatGroups, setChatGroups] = useState<any[]>([]);
+ const [chatGroups, setChatGroups] = useState<ChatGroup[]>([]);
+
   const [headerchatGroups, setheaderchatGroups] = useState<any[]>([]);
   const searchParams = useSearchParams();
   const chatGroupId = searchParams.get("chatGroupId");
