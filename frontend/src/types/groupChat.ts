@@ -1,18 +1,19 @@
 import { UUID } from "./uuid";
 
-export interface ChatGroup {
-  id_group_chat: UUID;
+export interface MessageChat {
+  id_message: string;
+  id_personal_chat: string;
   id_users: string;
-  name_group: string;
-  foto?: string; // optional, since fallback exists
-  members?: {
+  message: string;
+  date: string;
+  user: {
     id_users: string;
-    username: string;
-    first_name?: string;
-    last_name?: string;
-    foto?: string | null;
-  }[]; // optional array of member objects
+    first_name: string;
+    last_name: string;
+    foto: string | null;
+  };
 }
+
 
 
 
